@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bri5et1josa5j"]
+
+[ext_resource type="Script" uid="uid://icg35dcv1rc5" path="res://script/base_ball.gd" id="1_oxj6q"]
+
+[node name="BaseBall" type="RigidBody2D" groups=["balls"]]
+script = ExtResource("1_oxj6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
