@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyt1m05mgvpal"]
+[gd_scene load_steps=6 format=3 uid="uid://dyt1m05mgvpal"]
 
 [ext_resource type="PackedScene" uid="uid://c0h2omjv6dfef" path="res://scenes/balls/tennis_ball.tscn" id="1_6sk5w"]
 [ext_resource type="Script" uid="uid://cqynvw3w5pond" path="res://script/test_levels.gd" id="1_u3mtq"]
 [ext_resource type="PackedScene" uid="uid://cmu6wlygy3vih" path="res://scenes/roads/pallet_road.tscn" id="2_qxq0v"]
 [ext_resource type="PackedScene" uid="uid://gtemylei6gls" path="res://scenes/goals/standart_goal.tscn" id="4_4boos"]
+[ext_resource type="PackedScene" uid="uid://bvf2dnhugbl2c" path="res://scenes/roads/batut_road.tscn" id="5_4boos"]
 
 [node name="TestLevels" type="Node2D"]
 script = ExtResource("1_u3mtq")
@@ -12,9 +13,12 @@ script = ExtResource("1_u3mtq")
 position = Vector2(65, 57)
 
 [node name="BaseRoad" parent="." instance=ExtResource("2_qxq0v")]
-position = Vector2(77, 211)
+position = Vector2(161, 222)
 rotation = 0.0378088
 bounce = 0.1
 
 [node name="BaseGoal" parent="." instance=ExtResource("4_4boos")]
-position = Vector2(319, 238)
+position = Vector2(703, 335)
+
+[node name="BaseRoad2" parent="." instance=ExtResource("5_4boos")]
+position = Vector2(410, 344)
