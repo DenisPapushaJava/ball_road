@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://icg35dcv1rc5" path="res://script/base_ball.gd" id="1_oxj6q"]
 
 [node name="BaseBall" type="RigidBody2D" groups=["balls"]]
+z_index = 5
 script = ExtResource("1_oxj6q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -15,10 +15,25 @@ position = Vector2(65, 57)
 [node name="BaseRoad" parent="." instance=ExtResource("2_qxq0v")]
 position = Vector2(161, 222)
 rotation = 0.0378088
+friction = 10.0
 bounce = 0.1
 
 [node name="BaseGoal" parent="." instance=ExtResource("4_4boos")]
-position = Vector2(703, 335)
+position = Vector2(879, 372)
 
 [node name="BaseRoad2" parent="." instance=ExtResource("5_4boos")]
 position = Vector2(410, 344)
+friction = 0.5
+bounce = 10.0
+
+[node name="BaseRoad3" parent="." instance=ExtResource("5_4boos")]
+position = Vector2(622, 423)
+friction = 0.5
+bounce = 10.0
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(629, -8)
+color = Color(1, 1, 0.992157, 1)
+energy = 0.21
+shadow_enabled = true
+shadow_color = Color(0.34902, 0.34902, 0.34902, 0.607843)
