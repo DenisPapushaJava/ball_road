@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvf2dnhugbl2c"]
+
+[ext_resource type="PackedScene" uid="uid://b38t4l81u6c6p" path="res://scenes/Base_Road.tscn" id="1_g2kg0"]
+[ext_resource type="Texture2D" uid="uid://d0i1nty37kpua" path="res://assets/roads/batut.png" id="2_bw04w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw04w"]
+size = Vector2(78.9298, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxybr"]
+size = Vector2(236, 118)
+
+[node name="BaseRoad" instance=ExtResource("1_g2kg0")]
+bounce = 6.0
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_bw04w")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-1, -13)
+scale = Vector2(2.99, 0.85)
+shape = SubResource("RectangleShape2D_bw04w")
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+[node name="MouseCollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_cxybr")

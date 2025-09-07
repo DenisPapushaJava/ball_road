@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyd7bgq3cttk5"]
+
+[ext_resource type="PackedScene" uid="uid://dchr36o8l2plc" path="res://scenes/Base_Wind.tscn" id="1_8w4ry"]
+[ext_resource type="Texture2D" uid="uid://dhy3v8s7cw1oy" path="res://assets/wind/wind.png" id="2_3xfv4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w4ry"]
+size = Vector2(498, 165)
+
+[node name="BaseWind" instance=ExtResource("1_8w4ry")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3xfv4")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-289, -35.5)
+shape = SubResource("RectangleShape2D_8w4ry")

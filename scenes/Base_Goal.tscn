@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cplicakbvj1ee"]
+
+[ext_resource type="Script" uid="uid://ces0u3rlueyqo" path="res://script/base_goal.gd" id="1_0qlex"]
+[ext_resource type="Texture2D" uid="uid://djuaiaojhh4lf" path="res://assets/confetti.png" id="2_cckn7"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7k14p"]
+particle_flag_disable_z = true
+angle_min = -281.4
+angle_max = 430.4
+spread = 180.0
+initial_velocity_min = 580.46
+initial_velocity_max = 971.26
+angular_velocity_min = 480.0
+angular_velocity_max = 637.24
+orbit_velocity_min = -0.805
+orbit_velocity_max = 0.0460001
+radial_velocity_min = -321.84
+radial_velocity_max = 103.45
+gravity = Vector3(0, 98, 0)
+linear_accel_min = -16.09
+linear_accel_max = 3.45
+tangential_accel_min = 49.43
+tangential_accel_max = 68.97
+damping_max = 4.598
+scale_min = 0.1
+scale_max = 0.3
+scale_over_velocity_min = 137.94
+scale_over_velocity_max = 293.12
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+
+[node name="BaseGoal" type="Area2D"]
+script = ExtResource("1_0qlex")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Confetti" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = ExtResource("2_cckn7")
+lifetime = 0.63
+interp_to_end = 0.06
+one_shot = true
+use_fixed_seed = true
+seed = 3421178257
+process_material = SubResource("ParticleProcessMaterial_7k14p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

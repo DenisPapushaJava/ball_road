@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://gtemylei6gls"]
+
+[ext_resource type="PackedScene" uid="uid://cplicakbvj1ee" path="res://scenes/Base_Goal.tscn" id="1_wser7"]
+[ext_resource type="Texture2D" uid="uid://cg3yuagu8d4ts" path="res://assets/goals/standart_goal.png" id="2_s5o26"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_7gqld"]
+points = PackedVector2Array(26.9604, 96.0111, 25.0413, -99.9897, -23.9806, -47.0099, -24.0161, 38.9901)
+
+[node name="BaseGoal" instance=ExtResource("1_wser7")]
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_s5o26")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-3, 69)
+rotation = 1.57038
+shape = SubResource("ConvexPolygonShape2D_7gqld")
+
+[node name="Confetti" parent="." index="2"]
+position = Vector2(0, -57)
+lifetime = 0.99
+interp_to_end = 0.1
+explosiveness = 0.7
+seed = 23428163

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b38t4l81u6c6p"]
+
+[ext_resource type="Script" uid="uid://cf7aorauy6ob7" path="res://script/base_road.gd" id="1_8s528"]
+
+[node name="BaseRoad" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource("1_8s528")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

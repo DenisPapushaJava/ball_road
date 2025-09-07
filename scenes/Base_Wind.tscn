@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://dchr36o8l2plc"]
+
+[ext_resource type="Script" uid="uid://cko2wwmqsjc4i" path="res://script/base_wind.gd" id="1_s7p00"]
+[ext_resource type="Texture2D" uid="uid://sifamrdtx6j7" path="res://assets/wind/wind_particle.png" id="2_4ltqb"]
+
+[sub_resource type="CurveTexture" id="CurveTexture_1px6s"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1px6s"]
+particle_flag_rotate_y = true
+emission_shape = 1
+emission_sphere_radius = 6.47
+angle_min = -71.5
+angle_max = 9.30001
+angle_curve = SubResource("CurveTexture_1px6s")
+direction = Vector3(-1, 0, 0)
+spread = 10.903
+flatness = 0.493
+initial_velocity_min = 315.18
+initial_velocity_max = 341.25
+orbit_velocity_min = 0.436
+orbit_velocity_max = 0.764
+radial_velocity_min = 43.2
+radial_velocity_max = 390.93
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 25.93
+scale_over_velocity_max = 43.2
+turbulence_enabled = true
+turbulence_noise_strength = 8.64
+turbulence_noise_scale = 4.322
+turbulence_noise_speed_random = 1.96
+turbulence_influence_min = 0.108
+turbulence_influence_max = 0.108
+turbulence_initial_displacement_min = -13.5
+turbulence_initial_displacement_max = -0.0999985
+
+[node name="BaseWind" type="Area2D"]
+script = ExtResource("1_s7p00")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="WindParticle" type="GPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.435294)
+self_modulate = Color(0.772549, 0.917647, 1, 0.486275)
+position = Vector2(-69, -36)
+amount = 15
+texture = ExtResource("2_4ltqb")
+lifetime = 1.1
+speed_scale = 5.0
+use_fixed_seed = true
+seed = 3878496217
+interpolate = false
+fract_delta = false
+trail_sections = 2
+process_material = SubResource("ParticleProcessMaterial_1px6s")
