@@ -23,4 +23,5 @@ rotation = 0.0513386
 position = Vector2(510, 428)
 
 [node name="BaseWind" parent="." index="6" instance=ExtResource("6_sk5k4")]
-position = Vector2(1044, 282)
+position = Vector2(951, 156)
+rotation = -1.01985
