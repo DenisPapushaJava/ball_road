@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djuaiaojhh4lf"
-path="res://.godot/imported/confetti.png-3f1dc2a9c476c7a3d68cab6cff989310.ctex"
+path="res://.godot/imported/confetti.png-429d7be69afbacc59e0b6a12f3f27d48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/confetti.png"
-dest_files=["res://.godot/imported/confetti.png-3f1dc2a9c476c7a3d68cab6cff989310.ctex"]
+source_file="res://assets/goals/confetti.png"
+dest_files=["res://.godot/imported/confetti.png-429d7be69afbacc59e0b6a12f3f27d48.ctex"]
 
 [params]
 
