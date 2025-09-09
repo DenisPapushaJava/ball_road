@@ -1,11 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dchr36o8l2plc"]
+[gd_scene load_steps=10 format=3 uid="uid://dchr36o8l2plc"]
 
 [ext_resource type="Script" uid="uid://cko2wwmqsjc4i" path="res://script/base_wind.gd" id="1_s7p00"]
 [ext_resource type="Texture2D" uid="uid://sifamrdtx6j7" path="res://assets/wind/wind_particle.png" id="2_4ltqb"]
 
+[sub_resource type="Curve" id="Curve_4ltqb"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="CurveTexture" id="CurveTexture_1px6s"]
+curve = SubResource("Curve_4ltqb")
+
+[sub_resource type="Curve" id="Curve_41i5k"]
+_limits = [0.0, 100.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_4ltqb"]
+curve = SubResource("Curve_41i5k")
 
 [sub_resource type="Curve" id="Curve_1px6s"]
 _data = [Vector2(0.00178253, 0.56866), 0.0, 0.0, 0, 0, Vector2(0.762923, 0.871879), -0.146685, -0.146685, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
