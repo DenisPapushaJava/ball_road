@@ -1,30 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://dchr36o8l2plc"]
+[gd_scene load_steps=8 format=3 uid="uid://dchr36o8l2plc"]
 
 [ext_resource type="Script" uid="uid://cko2wwmqsjc4i" path="res://script/base_wind.gd" id="1_s7p00"]
 [ext_resource type="Texture2D" uid="uid://sifamrdtx6j7" path="res://assets/wind/wind_particle.png" id="2_4ltqb"]
 
 [sub_resource type="CurveTexture" id="CurveTexture_1px6s"]
 
+[sub_resource type="CurveTexture" id="CurveTexture_4ltqb"]
+
+[sub_resource type="Curve" id="Curve_1px6s"]
+_data = [Vector2(0.00178253, 0.56866), 0.0, 0.0, 0, 0, Vector2(0.762923, 0.871879), -0.146685, -0.146685, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_41i5k"]
+curve = SubResource("Curve_1px6s")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1px6s"]
-particle_flag_rotate_y = true
 emission_shape = 1
 emission_sphere_radius = 6.47
-angle_min = -71.5
-angle_max = 9.30001
 angle_curve = SubResource("CurveTexture_1px6s")
 direction = Vector3(-1, 0, 0)
-spread = 10.903
-flatness = 0.493
-initial_velocity_min = 315.18
-initial_velocity_max = 341.25
-orbit_velocity_min = 0.436
-orbit_velocity_max = 0.764
-radial_velocity_min = 43.2
-radial_velocity_max = 390.93
+spread = 3.0
+initial_velocity_min = 547.23
+initial_velocity_max = 573.31
+angular_velocity_min = -21.64
+angular_velocity_max = 16.82
+orbit_velocity_min = -0.0779999
+orbit_velocity_max = 0.25
+radial_velocity_min = 116.83
+radial_velocity_max = 190.28
 gravity = Vector3(0, 0, 0)
+damping_curve = SubResource("CurveTexture_4ltqb")
+attractor_interaction_enabled = false
 scale_min = 0.0
-scale_max = 25.93
-scale_over_velocity_max = 43.2
+scale_max = 34.28
+scale_curve = SubResource("CurveTexture_41i5k")
+color = Color(1, 1, 1, 0.654902)
 turbulence_enabled = true
 turbulence_noise_strength = 8.64
 turbulence_noise_scale = 4.322
@@ -47,11 +57,12 @@ self_modulate = Color(0.772549, 0.917647, 1, 0.486275)
 position = Vector2(-69, -36)
 amount = 15
 texture = ExtResource("2_4ltqb")
-lifetime = 1.1
+lifetime = 2.0
 speed_scale = 5.0
 use_fixed_seed = true
 seed = 3878496217
 interpolate = false
 fract_delta = false
 trail_sections = 2
+trail_section_subdivisions = 1
 process_material = SubResource("ParticleProcessMaterial_1px6s")
