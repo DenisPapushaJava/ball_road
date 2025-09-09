@@ -1,7 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dchr36o8l2plc"]
 
 [ext_resource type="Script" uid="uid://cko2wwmqsjc4i" path="res://script/base_wind.gd" id="1_s7p00"]
-[ext_resource type="Texture2D" uid="uid://sifamrdtx6j7" path="res://assets/wind/wind_particle.png" id="2_4ltqb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s7p00"]
+load_path = "res://.godot/imported/wind_particle.png-5cbac8c9ae9451944bb1b9937f547e3f.ctex"
 
 [sub_resource type="Curve" id="Curve_4ltqb"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -68,7 +70,7 @@ modulate = Color(1, 1, 1, 0.435294)
 self_modulate = Color(0.772549, 0.917647, 1, 0.486275)
 position = Vector2(-69, -36)
 amount = 15
-texture = ExtResource("2_4ltqb")
+texture = SubResource("CompressedTexture2D_s7p00")
 lifetime = 2.0
 speed_scale = 5.0
 use_fixed_seed = true

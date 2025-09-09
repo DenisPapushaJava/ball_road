@@ -3,12 +3,14 @@ extends Node2D
 @onready var goal: Area2D = $BaseGoal
 @onready var ball: RigidBody2D = $BaseBall
 @onready var next: Button = $HBoxContainerButton/Next
+@onready var label_fps: Label = $LabelFPS
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	goal.goal_reached.connect(on_goal_reached)
 
-
+func _process(delta: float) -> void:
+	label_fps.text = str(Engine.get_frames_per_second())
 func  on_goal_reached(ball_ref):
 	next.visible = true
 	print("FINISH")

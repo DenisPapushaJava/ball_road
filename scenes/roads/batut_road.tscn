@@ -1,7 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bvf2dnhugbl2c"]
 
 [ext_resource type="PackedScene" uid="uid://b38t4l81u6c6p" path="res://scenes/Base_Road.tscn" id="1_g2kg0"]
-[ext_resource type="Texture2D" uid="uid://d0i1nty37kpua" path="res://assets/roads/batut.png" id="2_bw04w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g2kg0"]
+load_path = "res://.godot/imported/batut.png-7fc1328cad341f6aad38cb994bde0b5e.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bw04w"]
 size = Vector2(78.9298, 20)
@@ -14,7 +16,7 @@ bounce = 6.0
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_bw04w")
+texture = SubResource("CompressedTexture2D_g2kg0")
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(-1, -13)

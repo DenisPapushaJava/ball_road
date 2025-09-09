@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3p03x0y3vrdb"]
+[gd_scene load_steps=7 format=3 uid="uid://b3p03x0y3vrdb"]
 
 [ext_resource type="PackedScene" uid="uid://dyt1m05mgvpal" path="res://scenes/levels/level_0.tscn" id="1_8lvbn"]
 [ext_resource type="PackedScene" uid="uid://c0h2omjv6dfef" path="res://scenes/balls/tennis_ball.tscn" id="2_ehh5c"]
 [ext_resource type="PackedScene" uid="uid://gtemylei6gls" path="res://scenes/goals/standart_goal.tscn" id="3_5lq2q"]
 [ext_resource type="PackedScene" uid="uid://cmu6wlygy3vih" path="res://scenes/roads/pallet_road.tscn" id="4_5lq2q"]
 [ext_resource type="PackedScene" uid="uid://bvf2dnhugbl2c" path="res://scenes/roads/batut_road.tscn" id="5_36x7f"]
+[ext_resource type="PackedScene" uid="uid://cyd7bgq3cttk5" path="res://scenes/wind/fan_wind.tscn" id="6_sk5k4"]
 
 [node name="levels_1" instance=ExtResource("1_8lvbn")]
 
@@ -20,3 +21,7 @@ position = Vector2(877, 427)
 
 [node name="BaseBall" parent="." index="5" instance=ExtResource("2_ehh5c")]
 position = Vector2(119, 61)
+
+[node name="BaseWind" parent="." index="6" instance=ExtResource("6_sk5k4")]
+position = Vector2(1208, 427)
+rotation = 0.0176693
